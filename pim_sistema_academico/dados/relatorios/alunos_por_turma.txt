@@ -1,0 +1,15 @@
+Turma: 1dsa (123456gf)
+   - Nenhum aluno associado.
+
+Turma: ds (12345)
+   - Nenhum aluno associado.
+
+Turma: ds (12345)
+   - Nenhum aluno associado.
+
+Turma: matematica (123)
+   - caio (Matrícula: 12345)
+
+Turma: mat (1322)
+   - caio (Matrícula: 1611)
+

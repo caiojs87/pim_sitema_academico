@@ -1,0 +1,42 @@
+[
+    {
+        "usuario": "admin",
+        "senha": "1234",
+        "tipo": "admin"
+    },
+    {
+        "usuario": "caio",
+        "senha": "12345",
+        "tipo": "aluno"
+    },
+    {
+        "usuario": "lucas",
+        "senha": "hhh",
+        "tipo": "aluno"
+    },
+    {
+        "usuario": "pedro",
+        "senha": "fhjk",
+        "tipo": "aluno"
+    },
+    {
+        "usuario": "miguel",
+        "senha": "4152",
+        "tipo": "aluno"
+    },
+    {
+        "usuario": "clara",
+        "senha": "4178",
+        "tipo": "aluno"
+    },
+    {
+        "usuario": "nicolas",
+        "senha": "9876",
+        "tipo": "aluno"
+    },
+    {
+        "usuario": "nicole",
+        "senha": "7896",
+        "tipo": "aluno"
+    }
+]

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="text-center mt-5">
+  {% if session.get('tipo') == 'admin' %}
+    <h1 class="fw-bold text-unip-blue">Painel do Administrador</h1>
+    <p class="lead mt-3">Gerencie alunos, turmas e relatórios</p>
+
+    <div class="mt-4">
+      <a href="/alunos" class="btn btn-unip-blue m-2">👩‍🎓 Alunos</a>
+      <a href="/turmas" class="btn btn-unip-yellow m-2">🏫 Turmas</a>
+      <a href="/relatorios" class="btn btn-unip-red m-2">📋 Relatórios</a>
+
+    </div>
+
+  {% elif session.get('tipo') == 'aluno' %}
+    <h1 class="fw-bold text-unip-blue">Bem-vindo(a), {{ session.get('usuario')|capitalize }}!</h1>
+    <p class="lead mt-3">Acesse suas turmas, veja suas notas, média e faltas.</p>
+
+    <div class="mt-4">
+      <a href="/turmas" class="btn btn-unip-yellow m-2">🏫 Minhas Turmas</a>
+    
+  {% endif %}
+
+{% endblock %}

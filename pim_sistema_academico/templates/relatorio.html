@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+  <h2 class="text-primary mb-4">📊 Relatório Geral do Sistema</h2>
+
+  <div class="row text-center mb-4">
+    <div class="col-md-3">
+      <div class="card bg-light shadow-sm">
+        <div class="card-body">
+          <h5>Total de Alunos</h5>
+          <h3 class="text-primary">{{ total_alunos }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-light shadow-sm">
+        <div class="card-body">
+          <h5>Total de Turmas</h5>
+          <h3 class="text-success">{{ total_turmas }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-light shadow-sm">
+        <div class="card-body">
+          <h5>Média de Alunos por Turma</h5>
+          <h3 class="text-warning">{{ media_alunos_por_turma }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-light shadow-sm">
+        <div class="card-body">
+          <h5>Média Geral de Notas</h5>
+          <h3 class="text-info">{{ media_geral_notas }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mb-5">
+    <h5 class="text-muted">📉 Média Geral de Faltas: <strong class="text-danger">{{ media_geral_faltas }}</strong></h5>
+  </div>
+
+  <h4 class="mt-5 mb-3 text-secondary">📋 Resumo por Turma</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle shadow-sm">
+      <thead class="table-dark text-center">
+        <tr>
+          <th>Turma</th>
+          <th>Código</th>
+          <th>Qtd. de Alunos</th>
+          <th>Média de Notas</th>
+          <th>Média de Faltas</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for turma in resumo_turmas %}
+        <tr>
+          <td>{{ turma.nome }}</td>
+          <td>{{ turma.codigo }}</td>
+          <td class="text-center">{{ turma.qtd_alunos }}</td>
+          <td class="text-center text-success fw-bold">{{ turma.media_notas }}</td>
+          <td class="text-center text-danger fw-bold">{{ turma.media_faltas }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="text-center mt-4">
+  <a href="/" class="btn btn-secondary">⬅️ Voltar</a>
+{% endblock %}
+

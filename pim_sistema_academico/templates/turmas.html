@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2 class="fw-bold text-unip-blue mb-3">🏫 Minhas Turmas</h2>
+
+    {% if turmas and turmas|length > 0 %}
+        <p class="lead">Estas são as turmas que você está participando:</p>
+
+        <div class="row justify-content-center mt-4">
+            {% for turma in turmas %}
+            <div class="col-md-4">
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title text-unip-blue fw-bold">{{ turma.nome }}</h5>
+                        <p class="card-text text-muted">Código: {{ turma.codigo }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-warning mt-4">
+            😕 Você ainda não está matriculado em nenhuma turma.<br>
+            Fale com o coordenador ou administrador do sistema.
+        </div>
+    {% endif %}
+
+ 
+</div>
+<div class="text-center mt-4">
+  <a href="/" class="btn btn-secondary">⬅️ Voltar</a>
+</div>
+
+{% endblock %}
+
+
+
+
+

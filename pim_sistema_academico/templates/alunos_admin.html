@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="fw-bold text-unip-blue text-center mb-4">👩‍🎓 Gerenciamento de Alunos</h2>
+
+    <!-- Formulário para adicionar novo aluno -->
+    <form method="POST" class="card p-4 shadow-sm mb-5 border-0">
+        <input type="hidden" name="acao" value="cadastrar">
+        <div class="row g-2 align-items-center">
+            <div class="col-md-5">
+                <input type="text" class="form-control" name="nome" placeholder="Nome do aluno" required>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="matricula" placeholder="Matrícula" required>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-unip-yellow w-100">➕ Cadastrar</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Lista de alunos -->
+    {% if alunos and alunos|length > 0 %}
+        <div class="row">
+            {% for aluno in alunos %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-unip-blue fw-bold">{{ aluno.nome }}</h5>
+                        <p class="card-text text-muted mb-2">Matrícula: {{ aluno.matricula }}</p>
+                        <form method="POST" onsubmit="return confirm('Excluir {{ aluno.nome }}?');">
+                            <input type="hidden" name="acao" value="excluir">
+                            <input type="hidden" name="matricula" value="{{ aluno.matricula }}">
+                            <button type="submit" class="btn btn-danger btn-sm w-100">🗑️ Excluir</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-warning text-center">
+            ⚠️ Nenhum aluno cadastrado ainda.
+        </div>
+    {% endif %}
+
+    <div class="text-center mt-4">
+        <a href="/" class="btn btn-secondary">⬅️ Voltar</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5" style="max-width: 400px;">
+  <h2 class="text-center text-unip-blue fw-bold mb-4">🔐 Acesso ao Sistema</h2>
+
+  {% if erro %}
+    <div class="alert alert-danger">{{ erro }}</div>
+  {% endif %}
+
+  <form action="/login" method="POST" class="border p-4 rounded shadow-sm bg-light">
+      <div class="mb-3">
+          <label for="usuario" class="form-label">Usuário:</label>
+          <input type="text" id="usuario" name="usuario" class="form-control" required>
+      </div>
+      <div class="mb-3">
+          <label for="senha" class="form-label">Senha:</label>
+          <input type="password" id="senha" name="senha" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-unip-blue w-100">Entrar</button>
+  </form>
+</div>
+{% endblock %}
+
+

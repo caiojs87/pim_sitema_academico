@@ -1,0 +1,100 @@
+[
+    {
+        "nome": "matematica",
+        "codigo": "asdfg",
+        "alunos": [
+            {
+                "nome": "lucas",
+                "matricula": "hhh",
+                "nota": 10.0,
+                "faltas": 0,
+                "np1": 10.0,
+                "np2": 10.0,
+                "pim": 10.0,
+                "media": 10.0
+            },
+            {
+                "nome": "pedro",
+                "matricula": "fhjk",
+                "nota": 4.0,
+                "faltas": 3,
+                "np1": null,
+                "np2": null,
+                "pim": null
+            },
+            {
+                "nome": "clara",
+                "matricula": "4178",
+                "np1": 5.0,
+                "np2": 10.0,
+                "pim": 5.0,
+                "media": 7.0,
+                "faltas": 0
+            },
+            {
+                "nome": "miguel",
+                "matricula": "4152",
+                "np1": null,
+                "np2": null,
+                "pim": null,
+                "media": null,
+                "faltas": 0
+            }
+        ]
+    },
+    {
+        "nome": "português",
+        "codigo": "fazol",
+        "alunos": [
+            {
+                "nome": "caio",
+                "matricula": "12345",
+                "nota": null,
+                "faltas": 0,
+                "np1": 10.0,
+                "np2": 10.0,
+                "pim": 10.0,
+                "media": 10.0
+            },
+            {
+                "nome": "lucas",
+                "matricula": "hhh",
+                "nota": null,
+                "faltas": 0,
+                "np1": null,
+                "np2": null,
+                "pim": null
+            },
+            {
+                "nome": "pedro",
+                "matricula": "fhjk",
+                "nota": null,
+                "faltas": 0
+            },
+            {
+                "nome": "miguel",
+                "matricula": "4152",
+                "nota": null,
+                "faltas": 0
+            },
+            {
+                "nome": "Nicolas",
+                "matricula": "9876",
+                "np1": null,
+                "np2": null,
+                "pim": null,
+                "media": null,
+                "faltas": 0
+            },
+            {
+                "nome": "clara",
+                "matricula": "4178",
+                "np1": null,
+                "np2": null,
+                "pim": null,
+                "media": null,
+                "faltas": 0
+            }
+        ]
+    }
+]

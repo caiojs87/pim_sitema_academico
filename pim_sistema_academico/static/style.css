@@ -1,0 +1,91 @@
+/* --- Cores UNIP --- */
+.bg-unip-blue { background-color: #0033A0 !important; }
+.text-unip-blue { color: #0033A0 !important; }
+.text-unip-yellow { color: #FFD100 !important; }
+
+.btn-unip-blue {
+    background-color: #0033A0;
+    color: white;
+}
+.btn-unip-blue:hover {
+    background-color: #00257a;
+    color: white;
+}
+
+.btn-unip-yellow {
+    background-color: #FFD100;
+    color: #0033A0;
+}
+.btn-unip-yellow:hover {
+    background-color: #e6c200;
+    color: #0033A0;
+}
+
+.btn-unip-red {
+    background-color: #DA291C;
+    color: white;
+}
+.btn-unip-red:hover {
+    background-color: #b71c12;
+    color: white;
+}
+/* 🎨 Tema UNIP */
+.bg-unip-blue {
+    background-color: #0033A0 !important;
+}
+.text-unip-blue {
+    color: #0033A0 !important;
+}
+.text-unip-yellow {
+    color: #FFD700 !important;
+}
+.btn-unip-yellow {
+    background-color: #FFD700 !important;
+    color: #0033A0 !important;
+    font-weight: bold;
+    border: none;
+}
+.btn-unip-yellow:hover {
+    background-color: #ffcc00 !important;
+    color: #002070 !important;
+}
+.card {
+    border-radius: 10px;
+}
+
+.bg-unip-blue {
+    background-color: #0033A0 !important;
+}
+.text-unip-blue {
+    color: #0033A0 !important;
+}
+.btn-unip-yellow {
+    background-color: #FFD700 !important;
+    color: #0033A0 !important;
+    font-weight: bold;
+    border: none;
+}
+.btn-unip-yellow:hover {
+    background-color: #ffcc00 !important;
+    color: #002070 !important;
+}
+
+.bg-unip-blue {
+    background-color: #0033A0 !important;
+}
+.text-unip-blue {
+    color: #0033A0 !important;
+}
+.text-unip-yellow {
+    color: #FFD700 !important;
+}
+.btn-unip-yellow {
+    background-color: #FFD700 !important;
+    color: #0033A0 !important;
+    font-weight: bold;
+    border: none;
+}
+.btn-unip-yellow:hover {
+    background-color: #ffcc00 !important;
+    color: #002070 !important;
+}

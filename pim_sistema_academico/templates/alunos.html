@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="fw-bold text-unip-blue text-center mb-4">👩‍🎓 Gerenciar Alunos</h2>
+
+    <!-- Formulário para adicionar aluno -->
+    <form method="POST" class="card p-4 shadow-sm mb-4 border-0">
+        <input type="hidden" name="acao" value="adicionar">
+        <div class="row g-2 align-items-center">
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="nome" placeholder="Nome do aluno" required>
+            </div>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="matricula" placeholder="Matrícula" required>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-unip-yellow w-100">➕ Cadastrar</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Lista de alunos -->
+    {% if alunos %}
+    <table class="table table-striped align-middle">
+        <thead class="table-warning text-center">
+            <tr>
+                <th>Nome</th>
+                <th>Matrícula</th>
+                <th>Login</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aluno in alunos %}
+            <tr>
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.matricula }}</td>
+                <td>{{ aluno.nome.lower().replace(' ', '') }} / {{ aluno.matricula }}</td>
+                <td class="text-center">
+                    <form method="POST" style="display:inline;">
+                        <input type="hidden" name="acao" value="excluir">
+                        <input type="hidden" name="matricula" value="{{ aluno.matricula }}">
+                        <button class="btn btn-outline-danger btn-sm" onclick="return confirm('Excluir {{ aluno.nome }}?')">🗑️ Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <div class="alert alert-warning text-center">⚠️ Nenhum aluno cadastrado ainda.</div>
+    {% endif %}
+
+    <div class="text-center mt-4">
+        <a href="/" class="btn btn-secondary">⬅️ Voltar</a>
+    </div>
+</div>
+{% endblock %}

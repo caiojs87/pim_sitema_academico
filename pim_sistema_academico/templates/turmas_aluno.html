@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid mt-4">
+  <h2 class="fw-bold text-unip-blue text-center mb-4">📚 Minhas Turmas</h2>
+
+  {% if turmas %}
+  <div class="row g-3">
+    {% for turma in turmas %}
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="card-header bg-unip-blue text-white text-center">
+          <h5 class="mb-0">{{ turma.turma }}</h5>
+          <small>({{ turma.codigo }})</small>
+        </div>
+        <div class="card-body text-center">
+          <p><strong>NP1:</strong> {{ turma.np1 or '-' }}</p>
+          <p><strong>NP2:</strong> {{ turma.np2 or '-' }}</p>
+          <p><strong>PIM/AVA:</strong> {{ turma.pim or '-' }}</p>
+          <p><strong>Faltas:</strong>
+            <span class="{% if turma.faltas > 5 %}text-danger{% else %}text-secondary{% endif %}">
+              {{ turma.faltas or 0 }}
+            </span>
+          </p>
+          <p><strong>Média Final:</strong>
+            {% if turma.media %}
+              <span class="{% if turma.media < 6 %}text-danger{% else %}text-success{% endif %} fw-bold">{{ turma.media }}</span>
+            {% else %}
+              <span class="text-muted">Ainda não calculada</span>
+            {% endif %}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="alert alert-warning text-center mt-4">
+    ⚠️ Você ainda não está matriculado em nenhuma turma.
+  </div>
+  {% endif %}
+
+  <div class="text-center mt-4">
+    <a href="/" class="btn btn-secondary w-100 d-md-inline w-md-auto">⬅️ Voltar</a>
+  </div>
+</div>
+{% endblock %}
